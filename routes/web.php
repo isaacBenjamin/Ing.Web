@@ -15,13 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 // routes/web.php
 
+
 use App\Http\Controllers\LibroController;
+
 
 Route::controller(LibroController::class)->group(function(){
 
     Route::get('/registrar-libro',      'registrarLibro');
     Route::post('/guardar-libro',       'guardarLibro');
-    Route::get('/catalogo',             'mostrarCatalogo');
+    Route::get('/',                     'mostrarCatalogo');
     Route::get('/tomar-prestado/{id}',  'tomarPrestado');
     Route::get('/libros-prestados',     'mostrarLibrosPrestados');
     Route::post('/devolver-libro/{id}', 'devolverLibro');
