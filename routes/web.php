@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LibroController;
 
-Route::controller(LibroController:class)->group(function(){
+Route::controller(LibroController::class)->group(function(){
 
     Route::get('/registrar-libro',      'registrarLibro');
     Route::post('/guardar-libro',       'guardarLibro');
