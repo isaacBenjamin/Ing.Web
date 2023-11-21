@@ -28,12 +28,12 @@ class LibroController extends Controller
 
     public function tomarPrestado($id)
     {
-        // Lógica para tomar prestado un libro
+        //tomarPrestadoLogic
     }
 
     public function mostrarLibrosPrestados()
     {
-        // Lógica para mostrar los libros prestados por el usuario
+        // Logica para mostrar libros prestados
     }
 
     public function devolverLibro($id)
