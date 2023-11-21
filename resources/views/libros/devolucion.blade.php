@@ -2,10 +2,10 @@
 
 @section('content')
     <h2>Mis Préstamos</h2>
-    
-    @if(count($prestamos) > 0)
+
+    @if (count($prestamos) > 0)
         <ul>
-            @foreach($prestamos as $prestamo)
+            @foreach ($prestamos as $prestamo)
                 <li>
                     Libro: {{ $prestamo->libro->titulo }} <br>
                     Fecha de Préstamo: {{ $prestamo->fecha_prestamo }} <br>

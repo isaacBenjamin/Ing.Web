@@ -9,7 +9,7 @@
 
 <body>
     <p>
-        <a href="{{ route('catalogo') }}">Catálogo</a>
+        <a href="{{ route('catalogo') }}">CATÁLOGO</a>
     </p>
 
     <hr>

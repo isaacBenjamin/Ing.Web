@@ -23,7 +23,7 @@ Route::controller(LibroController::class)->group(function(){
 
     Route::get('/registrar-libro',      'registrarLibro');
     Route::post('/guardar-libro',       'guardarLibro');
-    Route::get('/',                     'mostrarCatalogo');
+    Route::get('/',                     'mostrarCatalogo')->name('catalogo');
     Route::get('/tomar-prestado/{id}',  'tomarPrestado');
     Route::get('/libros-prestados',     'mostrarLibrosPrestados');
     Route::post('/devolver-libro/{id}', 'devolverLibro');
