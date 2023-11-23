@@ -19,6 +19,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        \App\Models\Libro::factory(10)->create();
+        \App\Models\Libro::factory(6)->create();
     }
 }

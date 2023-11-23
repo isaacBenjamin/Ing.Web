@@ -9,12 +9,33 @@
 
 <body>
     <p>
-        <a href="{{ route('catalogo') }}">CATÁLOGO</a>
+        <a href="{{ route('catalogo') }}">Catálogo</a>
+        <a href="{{ route('libros-prestados') }}">Préstamos</a>
+
+        @auth
+        <a href="{{ route('dashboard')}}">Dashboard</a>
+        @else
+        <a href="{{ route('login')}}">Login</a>
+        @endauth
     </p>
 
     <hr>
 
-    @yield('content')
+    <div class="container">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+
+        @yield('content')
+    </div>
 
 </body>
 

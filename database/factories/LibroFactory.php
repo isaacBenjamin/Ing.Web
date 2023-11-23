@@ -20,7 +20,7 @@ class LibroFactory extends Factory
             'titulo' => $this->faker->sentence,
             'autor' => $this->faker->name,
             'genero' => $this->faker->word,
-            'disponibilidad' => $this->faker->boolean,
+            'disponibilidad' => true
         ];
     }
 }

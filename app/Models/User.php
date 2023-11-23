@@ -43,4 +43,9 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function librosPrestados()
+    {
+        return $this->hasMany(Libro::class)->where('disponibilidad', false);
+    }
+
 }

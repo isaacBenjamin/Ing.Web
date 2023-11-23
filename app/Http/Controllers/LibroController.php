@@ -28,12 +28,31 @@ class LibroController extends Controller
 
     public function tomarPrestado($id)
     {
-        //tomarPrestadoLogic
-    }
 
+        $libro = Libro::findOrFail($id);
+
+        if ($libro->disponibilidad) {
+            // Actualizar disponibilidad del libro
+            $libro->disponibilidad = false;
+            $libro->save();
+
+            // Registrar la transacción o realizar otras acciones necesarias.
+
+            return redirect()->route('catalogo')->with('success', 'Libro tomado prestado exitosamente.');
+        } else {
+            return redirect()->route('catalogo')->with('error', 'Este libro no está disponible actualmente.');
+        }
+
+    }
     public function mostrarLibrosPrestados()
     {
-        // Logica para mostrar libros prestados
+        // Obtenemos el usuario autenticado
+        $usuario = Auth::user();
+
+        // Obtén los libros prestados por el usuario
+        $librosPrestados = $usuario->librosPrestados;
+
+        return view('libros.prestados', ['librosPrestados' => $librosPrestados]);
     }
 
     public function devolverLibro($id)

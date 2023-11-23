@@ -10,7 +10,6 @@
                 <h3>{{ $libro->titulo }}</h3>
                 <p>Autor: {{ $libro->autor }}</p>
                 <p>Género: {{ $libro->genero }}</p>
-                <p>Disponibilidad: {{ $libro->disponibilidad ? 'Disponible' : 'No Disponible' }}</p>
                 <a href="/tomar-prestado/{{ $libro->id }}">Tomar Prestado</a>
             </div>
         @endforeach
