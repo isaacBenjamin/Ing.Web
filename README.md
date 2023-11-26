@@ -1,7 +1,7 @@
 # Ing.Web
 Parcial 2
 
-Configurar la base de datos con uno de los 2 scripts proporcionados en PHPMyAdmin, estas poseen las inserciones necesarias.
+Configurar la base de datos con uno de los 2 scripts proporcionados, en PHPMyAdmin. Estas poseen las inserciones necesarias.
 
 usuarios: 
 admin
